@@ -3,36 +3,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Table from "./components/Table";
 import { timeSlots, rooms } from "./data";
-import styled from "styled-components";
 import { notify } from "./components/Toast";
-
-// Styled button component
-const StyledButton = styled.button`
-  background-color: #007bff; /* Bootstrap primary color */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  height: 38px;
-  transition: background-color 0.3s;
-  padding: 0px 18px;
-  &:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-  }
-`;
-const Card = styled.div`
-  background-color: #e9f3f6;
-  padding: 2rem;
-  border: none;
-  border-radius: 42px;
-`;
-const Content = styled.div`
-  display: flex;
-  gap: 12px;
-  align-items: end;
-  flex-wrap: wrap;
-`;
+import { StyledButton, Card, Content } from "./components/StyledComponents";
 function App() {
   //creating states for form input
   const [selectedDate, setSelectedDate] = useState(null);
